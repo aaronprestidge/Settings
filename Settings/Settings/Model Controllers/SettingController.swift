@@ -13,7 +13,7 @@ import UIKit
 class SettingController {
     
     //MARK:- SOURCEOF TRUTH:
-    let settings: [Setting] = {
+    static let settings: [Setting] = {
         let music = Setting(settingTitle: "music", image: #imageLiteral(resourceName: "iTunes"), isSet: false)
         let iBooks = Setting(settingTitle: "iBooks", image: #imageLiteral(resourceName: "iBooks"), isSet: false)
         let appStore = Setting(settingTitle: "App Store", image: #imageLiteral(resourceName: "appStore"), isSet: true)
@@ -21,8 +21,6 @@ class SettingController {
         return [music, iBooks, appStore]
     }()
     
-    //Shared Instance
-    static let sharedInstance = SettingController()
     
     
     //MARK: - METHODS:
